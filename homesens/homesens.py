@@ -117,31 +117,21 @@ class HomeSensorsApp(Gtk.Window):
 
         self.fullscreen()
 
-        # Box for auxiliary items
-        vbox_aux = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-
         # Box for values
         vbox_main = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
-        # Heading1 at the top
         self.mainlabel = Gtk.Label(label=None)
         self.mainlabel_css = self.mainlabel.get_style_context()
         self.mainlabel_css.add_class("main-label-normal")
         vbox_main.pack_start(self.mainlabel, False, True, 0)
 
-        # Frame for Heading2 and Value1
-        # frame_h2_v1 = Gtk.Frame()
-        # vbox_main.pack_start(frame_h2_v1, True, False, 0)
-
         vbox_h2_v1 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         vbox_h2_v1.set_halign(Gtk.Align.CENTER)
         vbox_h2_v1.set_valign(Gtk.Align.START)
-        # frame_h2_v1.add(vbox_h2_v1)
         vbox_main.pack_start(vbox_h2_v1, False, True, 0)
 
         dtbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing = 36)
         dtbox.set_halign(Gtk.Align.CENTER)
-        # dtbox.get_style_context().add_class("border2px")
         vbox_h2_v1.pack_start(dtbox, True, False, 0)
 
         self.clockdate = Gtk.Label(label="Initializing...")
@@ -358,19 +348,6 @@ class HomeSensorsApp(Gtk.Window):
         Gdk.cairo_set_source_rgba(cr, Gdk.RGBA(0, 0, 0, 1)) 
         cr.paint()
         return True
-
-    """
-    def do_update_mainlabel(self):
-        if self.inverted is False:
-            self.inverted = True
-            self.mainlabel_css.add_class("main-label-inverted")
-            self.mainlabel_css.remove_class("main-label-normal")
-        else:
-            self.inverted = False
-            self.mainlabel_css.add_class("main-label-normal")
-            self.mainlabel_css.remove_class("main-label-inverted")
-        return True
-    """
 
     def do_update_date_time(self):
         ltime = GLib.DateTime.new_now_local()
