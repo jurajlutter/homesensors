@@ -91,15 +91,6 @@ class HomeSensorsApp(Gtk.Window):
             sys.stderr.write("Error fetching data from {}: {}\n".format(self.uradmon_api, e))
             return None
 
-    def get_sysctl_value(self, key):
-        try:
-            # Run the sysctl command with the -n option to get the value directly
-            output = subprocess.check_output(["sysctl", "-n", key], encoding='UTF-8')
-            return output.strip()
-        except subprocess.CalledProcessError as e:
-            print(f"Failed to get sysctl value for {key}: {e}")
-            return None
-
     def __init__(self):
         super().__init__()
 
