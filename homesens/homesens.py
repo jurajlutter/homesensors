@@ -165,7 +165,7 @@ class HomeSensorsApp(Gtk.Window):
             vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
             frame.add(vbox)
 
-            radlabel = Gtk.Label(label="Radiácia [µSv]")
+            radlabel = Gtk.Label(label="Radiation [µSv]")
             radlabel.get_style_context().add_class("radlabel")
             vbox.pack_start(radlabel, False, False, 0)
 
@@ -204,7 +204,7 @@ class HomeSensorsApp(Gtk.Window):
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
         frame.add(vbox)
 
-        templabel = Gtk.Label(label="Teplota [℃]")
+        templabel = Gtk.Label(label="Temperature [℃]")
         templabel.get_style_context().add_class("templabel")
         vbox.pack_start(templabel, False, False, 0)
 
@@ -222,7 +222,7 @@ class HomeSensorsApp(Gtk.Window):
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
         frame.add(vbox)
 
-        humlabel = Gtk.Label(label="Vlhkosť [%]")
+        humlabel = Gtk.Label(label="Humidity [%]")
         humlabel.get_style_context().add_class("humlabel")
         vbox.pack_start(humlabel, False, False, 0)
 
