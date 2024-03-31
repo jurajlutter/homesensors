@@ -32,3 +32,9 @@ If -U or --no-urandom is NOT specified, then the following arguments are MANDATO
 --uradmon-api=<apiurl>         Specity uRadMon API URL, default:
                                https://data.uradmonitor.com/api/v1/devices
 ```
+
+### Screenshots
+
+![senzory-rpi](https://github.com/jurajlutter/homesensors/assets/40118509/be826e94-a401-4009-ab6b-aa034fc3210b)
+
+![senzory-en](https://github.com/jurajlutter/homesensors/assets/40118509/fc57bbd6-b1aa-4979-96d9-dc7945027298)
