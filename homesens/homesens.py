@@ -506,12 +506,12 @@ class HomeSensorsApp(Gtk.Window):
                         "uradmon-userkey=",
                         "uradmon-api="])
         except getopt.GetoptError as err:
-            usage()
+            self.usage()
             sys.exit(2)
 
         for o, a in opts:
             if o in ("-h", "--help"):
-                usage()
+                self.usage()
                 sys.exit(2)
             elif o in ("-l", "--list", "--list-sensors"):
                 self.lflag = True
@@ -552,7 +552,7 @@ class HomeSensorsApp(Gtk.Window):
                     sys.stderr.write("ERROR: Invalid uRadMon API endpoint specified.\n")
                     sys.exit(1)
             else:
-                usage()
+                self.usage()
                 sys.exit(2)
         return True
 
